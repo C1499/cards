@@ -46,8 +46,6 @@ public class Game {
 
     /**
      * 比较大小，首先按照牌的点数crad比较，如果相同，则按照花色比较
-     * 玩家1 胜利返回值：true
-     * 玩家2 胜利返回值：false
      * @param cards1
      * @param cards2
      */
