@@ -46,8 +46,6 @@ public class Game {
 
     /**
      * 比较大小，首先按照牌的点数crad比较，如果相同，则按照花色比较
-     * @param cards1
-     * @param cards2
      */
     public Cards isMax(Cards cards1, Cards cards2){
         Cards end = cards1;
