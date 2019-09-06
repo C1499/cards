@@ -100,8 +100,8 @@ public class Game {
 //      发牌
         game.sendCrads(player1,player2);
         System.out.println("----------------发牌完成----------------");
-        System.out.println(player1.getPlayerName()+"的牌为："+player1.playCards.toString());
-        System.out.println(player2.getPlayerName()+"的牌为："+player2.playCards.toString());
+        System.out.println("玩家："+player1.getPlayerName()+" 的牌为："+player1.playCards.toString());
+        System.out.println("玩家："+player2.getPlayerName()+" 的牌为："+player2.playCards.toString());
 
 //        比较大小,首先先比较自己的牌，接着再两个玩家之间对比
         Iterator<Cards> it = player1.playCards.iterator();
@@ -110,7 +110,12 @@ public class Game {
         Cards maxPlayer2 = game.isMax(it.next(),it.next());
 
         Cards max = game.isMax(maxPlayer1,maxPlayer2);
-        System.out.println("胜利者end："+max.toString());
+        if (max.toString().equals(maxPlayer1.toString())){
+            System.out.println("胜利者："+player1.getPlayerName());
+        }else{
+            System.out.println("胜利者："+player2.getPlayerName());
+        }
+
 //        nc.isMax(player1.playCards,player2.playCards);
     }
 
